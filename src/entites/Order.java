@@ -3,7 +3,9 @@ package entites;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName = "order")
+import dao.OrderDaoImpl;
+
+@DatabaseTable(tableName = "order", daoClass = OrderDaoImpl.class)
 public class Order {
 	@DatabaseField(generatedId = true)
 	private Integer pid;
@@ -13,4 +15,6 @@ public class Order {
 	private Customer customer;
 	@DatabaseField(foreign = true)
 	private Order order;
+	
+	Order() {}
 }
