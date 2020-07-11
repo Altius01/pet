@@ -14,7 +14,40 @@ public class Order {
 	@DatabaseField(foreign = true)
 	private Customer customer;
 	@DatabaseField(foreign = true)
-	private Order order;
+	private Product product;
 	
-	Order() {}
+	public Order() {}
+	
+	public Integer getPid() {
+		return pid;
+	}
+
+	public void setPid(Integer pid) {
+		this.pid = pid;
+	}
+
+	public Integer getCount() {
+		return count;
+	}
+
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
 }

@@ -18,5 +18,46 @@ public class Deal {
 	@DatabaseField(foreign = true)
 	private Order order;
 	
-	Deal(){}
+	public Deal(){}
+	
+	public Integer getPid() {
+		return pid;
+	}
+
+	public void setPid(Integer pid) {
+		this.pid = pid;
+	}
+
+	public Integer getCount() {
+		return count;
+	}
+
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+
+	public DealState getState() {
+		return state;
+	}
+
+	public void setState(DealState state) {
+		this.state = state;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
 }

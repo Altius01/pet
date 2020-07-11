@@ -31,4 +31,36 @@ public class Customer {
 	public String getName() {
 		return this.name;
 	}
+
+	public Integer getPid() {
+		return pid;
+	}
+
+	public void setPid(Integer pid) {
+		this.pid = pid;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
+	public ForeignCollection<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(ForeignCollection<Order> orders) {
+		this.orders = orders;
+	}
+
+	public ForeignCollection<Order> getDeals() {
+		return deals;
+	}
+
+	public void setDeals(ForeignCollection<Order> deals) {
+		this.deals = deals;
+	}
 }
