@@ -14,9 +14,9 @@ public class Deal {
 	@DatabaseField()
 	private DealState state;
 	@DatabaseField(foreign = true)
-	private Customer customer;
+	private Tender tender;
 	@DatabaseField(foreign = true)
-	private Order order;
+	private Supplier supplier;
 	
 	public Deal(){}
 	
@@ -44,20 +44,20 @@ public class Deal {
 		this.state = state;
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public Supplier getSupplier() {
+		return supplier;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
 	}
 
-	public Order getOrder() {
-		return order;
+	public Tender getTender() {
+		return tender;
 	}
 
-	public void setOrder(Order order) {
-		this.order = order;
+	public void setTender(Tender tender) {
+		this.tender = tender;
 	}
 
 }
